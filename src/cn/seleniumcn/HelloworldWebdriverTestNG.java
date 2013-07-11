@@ -6,6 +6,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import org.testng.Assert;
 
+/**
+@author Bruce Gu
+**/
 public class HelloworldWebdriverTestNG {
 	
 	public  static final String SELENIUMCN_LINK = "//td[div/span[contains(.,'seleniumcn.cn/ ')]]/h3//a";
