@@ -9,14 +9,14 @@ import org.testng.Assert;
 /**
 @author Bruce Gu
 **/
-public class HelloworldWebdriverTestNG {
+public class HelloworldWebdriverTestNG_Fail {
 	
 	public  static final String SELENIUMCN_LINK = "//td[div/span[contains(.,'seleniumcn.cn/ ')]]/h3//a";
 
 	WebDriver driver;
 	
 	@Test
-	public void testOne() throws Exception {	
+	public void testOne_Fail() throws Exception {	
 		
 		driver = new FirefoxDriver();
 		
@@ -38,7 +38,7 @@ public class HelloworldWebdriverTestNG {
 		
 		driver.switchTo().window(driver.getWindowHandles().toArray(new String[0])[1]);
 		
-		String expectedTitle ="Selenium 中文论坛, Webdriver 中文论坛, Selenium2, 软件测试,web自动化测试";
+		String expectedTitle ="Selenium 中文论坛, Webdriver 中文论坛, Selenium2, 软件测试,web自动化测试_Fail";
 		String actualTitle = driver.getTitle();
 		Assert.assertEquals(actualTitle,expectedTitle);		
 

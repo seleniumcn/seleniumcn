@@ -1,0 +1,10 @@
+<suite name="seleniumcn.cn.demo">
+	
+	<test name="test_seleniumcn" >
+		<classes>
+			<class name="cn.seleniumcn.HelloworldWebdriverTestNG"/>
+			<class name="cn.seleniumcn.HelloworldWebdriverTestNG_Fail"/>				
+		</classes>
+	</test>
+  
+</suite>
