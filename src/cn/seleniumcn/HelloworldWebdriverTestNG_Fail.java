@@ -11,7 +11,8 @@ import org.testng.Assert;
 **/
 public class HelloworldWebdriverTestNG_Fail {
 	
-	public  static final String SELENIUMCN_LINK = "//td[div/span[contains(.,'seleniumcn.cn/ ')]]/h3//a";
+	//public  static final String SELENIUMCN_LINK = "//td[div/span[contains(.,'seleniumcn.cn/ ')]]/h3//a";
+	public  static final String SELENIUMCN_LINK = "//td[div/span[starts-with(.,'seleniumcn.cn/')]]/h3//a";
 
 	WebDriver driver;
 	
