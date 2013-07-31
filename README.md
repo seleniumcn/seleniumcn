@@ -1,4 +1,4 @@
-[selenium中文论坛](http://seleniumcn.cn) 教程
+[Selenium中文论坛](http://seleniumcn.cn) Selenium 教程
 =============================================
 
 
