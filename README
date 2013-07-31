@@ -1,7 +1,13 @@
-Selenium中文论坛 教程
+<html>
+<head>
+</head>
 
-视频教程
-1. <a href="http://v.youku.com/v_show/id_XNTg0Njg4NDY0.html">Seleium2 从零开始_1 </a> Selenium 2, Java, TestNG</p>
-1. <a href="http://v.youku.com/v_show/id_XNTg1MTIyMTg0.html">Seleium2 从零开始_2 </a> ANT Jenkins</p>
-1. <a href="http://v.youku.com/v_show/id_XNTg3OTgzMzg0.html">Seleium2 从零开始_3 </a> ReportNG</p>
-1. <a href="http://v.youku.com/v_show/id_XNTg5ODAwMTI4.html">Seleium2 从零开始_4 </a> XPath</p>
+<body>
+<h3>Selenium中文论坛 教程</h3>
+
+<span>视频教程</span>
+<li><a href="http://v.youku.com/v_show/id_XNTg0Njg4NDY0.html">Seleium2 从零开始_1 </a> <span>Selenium 2, Java, TestNG</span></li>
+<li><a href="http://v.youku.com/v_show/id_XNTg1MTIyMTg0.html">Seleium2 从零开始_2 </a> <span>ANT Jenkins</span></li>
+<li><a href="http://v.youku.com/v_show/id_XNTg3OTgzMzg0.html">Seleium2 从零开始_3 </a> <span>ReportNG</span></li>
+<li><a href="http://v.youku.com/v_show/id_XNTg5ODAwMTI4.html">Seleium2 从零开始_4 </a> <span>XPath</span></li>
+</body>
