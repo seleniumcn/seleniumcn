@@ -216,3 +216,5 @@ pip-log.txt
 
 #svn file
 .svn
+#output
+test-output/*
