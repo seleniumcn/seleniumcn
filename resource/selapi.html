@@ -1,0 +1,118 @@
+<html><head>
+<title>selenium api demo</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+	function testConfirm() {
+		var span = document.getElementById("alertSpan");		
+		if (window.confirm('it is a confirm')) {
+			span.innerHTML = "OK selected";
+		}else {
+			span.innerHTML = "cancle selected";
+		}
+	}
+		
+	function testPrompt() {
+		var span = document.getElementById("alertSpan");
+		var  promptText = window.prompt("a prompt test");
+		if (promptText == null || promptText == "") {
+			alert("Please, please please input something");
+		}else {
+			span.innerHTML = promptText;	
+		}
+	}
+	
+function testwait(){
+
+}
+
+
+	
+</script>
+<b>--------------------following is Selenium API html demo source---------------------------</b>
+
+<div>
+<div>
+
+
+<div>
+<label>user name:</label><input id='userName' value="please input user name">
+</div>
+<div name="sexdiv" class="ext-radio_group">
+<div><label>M:</label><input type="radio" value="1" name="sex" checked=""></div>
+<div><label>F:</label><input type="radio"  value="2" name="sex"></div>
+</div>
+
+<div >
+<label>remember</label><input type="checkbox" class="ext-checkbox">
+</div>
+
+<b>-----------------------------------------------------------------</b>
+<div>
+<label name='displayedLabel'  style="width: 160px;display:block;">displayed label</label>
+</div>
+<div>
+<label name='hiddenLabel'  style="width: 160px;display:none;">not displayed label</label>
+</div>
+<b>-----------------------------------------------------------------</b>
+<div>
+<label>test select</label><select name="select" >
+<option value='1'>red</option>
+<option value='2'>blue</option>
+<option value='3'>green</option>
+
+</select>
+</div>
+<b>-----------------------------------------------------------------</b>
+<div>
+<input type="button" value="testAlert" onclick="alert('this is an alert test');">
+<input type="button" value="testConfirm" onclick="testConfirm()">
+<input type="button" value="testPrompt" onclick="testPrompt()">
+</div>
+<div>
+<span id="alertSpan">show....</span>
+<div>
+
+<b>-----------------------------test action doubleClick--------------------------------</b>
+
+<div id="doubleClickDiv" onclick ="document.getElementById('showdoubleclick').innerHTML='show double click result'" ondblclick="document.getElementById('showdoubleclick').innerHTML='double click action performened'">double click here</div>
+<div id="showdoubleclick">show double click result</div>
+
+<b>------------------------test action: moveToElement-------------------------------</b>
+
+<div id="testmouseover" onmouseover="document.getElementById('showmouseover').style.display='block'" onmouseout="document.getElementById('showmouseover').style.display='none'">
+<span>move mouse to here</span>
+<div id="showmouseover" style="display:none">show when mouse over</div>
+
+</div>
+
+<b>------------------------test action: clickAndHold  and release-------------------------------</b>
+<div id="testClickAndHold" onmousedown="document.getElementById('showClickAndHold').style.display='block'" onmouseup="document.getElementById('showClickAndHold').style.display='none'">
+<span>click and hold here</span>
+<div id="showClickAndHold" style="display:none">show when click and hold, and disapper when release</div>
+
+</div>
+
+<b>------------------------test action: contextClick-------------------------------</b>
+<div id="testContextClick" oncontextmenu="creturn false;"  onmouseout="document.getElementById('showContextClick').style.display='none'">
+<span>right click here</span>
+<div id="showContextClick" style="display:none">show when contextclick</div>
+
+</div>
+
+<b>------------------------test action: keyDown, keyUp-------------------------------</b>
+<form>
+<input id="test_key_event" type="text" />
+</form>
+<label id="keyeventlabel"></label>
+<div/>
+<b>------------------------test wait-------------------------------</b>
+<div>
+<input type='button' value="click me" onclick="testwait()"/>
+</div>
+<div id="testwaitdiv" style="display:none">loading....</div>
+
+
+</body></html>

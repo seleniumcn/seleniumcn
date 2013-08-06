@@ -1,0 +1,43 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+    <html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+    <title>js drag + drop koyoz</title>  
+    <style type="text/css">  
+    * {margin:0px;padding:0px;font-size:12px;}   
+    #drop{position:absolute;width:200px;height:300px;border:1px #A5B6C8 solid;background:#EEF3F7;left:400px;top:100px;padding:10px;}   
+    .item {width:100px; height:28px;background:#C2ECA7;text-align:center;line-height:28px;cursor:pointer;margin-top:5px;}   
+    #items {margin: 50px 0 0 100px;}   
+    </style>  
+    </head>  
+      
+    <body>  
+    <div id="drop">drop here</div>  
+      
+    <div id="items">  
+    <div id="item1" class="item">11111</div>  
+    <div id="item2" class="item">22222</div>  
+    <div id="item3" class="item">33333</div>  
+    <div id="item4" class="item">44444</div>  
+    <div id="item5" class="item">55555</div>  
+    <div id="item6" class="item">66666</div>  
+    </div>  
+      
+      
+      
+    <script type="text/javascript" src="drag-drop.js"></script>  
+    <script type="text/javascript">  
+    //逐个注册drag事件   
+    var itemx = document.getElementById('items').getElementsByTagName("div")   
+    for(var i = 0; l = itemx.length, i < l; i++)   
+    {   
+        makeDrag(itemx[i]);   
+    }   
+    //注册放置对象   
+    var dropItem = document.getElementById('drop');   
+    makeDrop(dropItem);   
+    </script>  
+    </body>  
+      
+    </html>   
