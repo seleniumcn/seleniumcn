@@ -1,0 +1,86 @@
+<html><head>
+<title>selenium api demo</title>
+</head>
+<body>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url,cfunc)
+{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=cfunc;
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+}
+
+
+function testWait(url, type)
+{
+document.getElementById('testwaitdiv').style.display="block";
+loadXMLDoc(url+"?type="+type,function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("testwaitdiv").innerHTML=xmlhttp.responseText;
+    }
+  });
+}
+
+function testWaitAttributeChange(url,type)
+{
+
+  loadXMLDoc(url+"?type="+type,function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	var resp=xmlhttp.responseText;	
+    document.getElementById("waitAttributeChanges").className=resp
+	document.getElementById("waitAttributeChanges").innerHTML="test wait for attribute changes, current:"+ resp;
+    }
+  });
+
+
+}
+
+
+
+
+
+	
+</script>
+<b>--------------------following is Selenium API html demo source---------------------------</b>
+
+<div>
+<div>
+
+
+<b>------------------------test wait-------------------------------</b>
+<div>
+<input type='button' value="testImplicitlyWait" onclick="testWait('test.php','1')"/>
+<input type='button' value="testExplicitlyWait" onclick="testWait('test.php','2')"/>
+
+</div>
+<div id="testwaitdiv" style="display:none">loading....</div>
+
+<input type='button' value="change Attribute " onclick="testWaitAttributeChange('test.php','class')"/>
+<div id="waitAttributeChanges" class="old">test wait for attribute changes, current:old</div>
+
+<b>------------------------test switch window-------------------------------</b>
+<div>
+<button id='openwindowwithname' onclick="window.open('newwindow.html', 'newwindow')">open window with name</button>
+
+</div>
+
+<b>------------------------test execute js-------------------------------</b>
+<div>
+<span id='testjs' >test js...</span>
+
+</div>
+
+</body></html>
