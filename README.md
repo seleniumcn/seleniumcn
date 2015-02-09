@@ -12,5 +12,5 @@
 * [selenium2从零开始5_XPath 下](http://v.youku.com/v_show/id_XNTkwNjQ2NDg0.html)
 * [selenium2从零开始6_Selnium API 上](http://v.youku.com/v_show/id_XNTkyNjk5Mjc2.html)
 
-有关视频话题请到[论坛](http://seleniumcn.cn)里讨论.
+有关视频话题请到[论坛](http://www.iselenium.com/)里讨论.
 
